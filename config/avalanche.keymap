@@ -2,9 +2,28 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    behaviors {
+        bluethooth: bluethooth {
+            compatible = "zmk,behavior-key-repeat";
+            label = "BLUETHOOTH";
+            #binding-cells = <0>;
+            usage-pages = #include <dt-bindings/zmk/bt.h>;
+        };
+
+        mousescroll: mousescroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "MOUSESCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            tap-ms = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,10 +41,14 @@
 &kp TAB       &kp Q         &kp W   &kp E      &kp R           &kp T                          &kp Y      &kp U            &kp I      &kp O   &kp P              &kp MINUS
 &kp ESCAPE    &kp LEFT_ALT  &kp A   &kp S      &kp D           &kp F      &kp G                          &kp H            &kp J      &kp K   &kp L              &kp SEMICOLON  &kp EQUAL  &kp CAPSLOCK
 &kp LEFT_GUI  &kp Z         &kp X   &kp C      &kp V           &kp B      &kp DELETE  &trans  &trans     &kp BACKSPACE    &kp N      &kp M   &kp COMMA          &kp PERIOD     &kp FSLH   &mo 1
-              &kp LEFT_GUI  &mo 3   &kp SPACE  &kp LEFT_SHIFT  &kp ENTER                      &kp ENTER  &kp RIGHT_SHIFT  &kp SPACE  &mo 2   &kp RIGHT_CONTROL
+              &kp LEFT_GUI  &tog 3  &kp SPACE  &kp LEFT_SHIFT  &kp ENTER                      &kp ENTER  &kp RIGHT_SHIFT  &kp SPACE  &mo 2   &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+
+            label = "a";
         };
 
         CONFIG {

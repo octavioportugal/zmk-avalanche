@@ -7,24 +7,6 @@
 #include <dt-bindings/zmk/hid_usage_pages.h>
 
 / {
-    behaviors {
-        bluethooth: bluethooth {
-            compatible = "zmk,behavior-key-repeat";
-            label = "BLUETHOOTH";
-            #binding-cells = <0>;
-            usage-pages = <ZMK_HID_USAGE_PAGE_CONSUMER>;
-        };
-
-        mousescroll: mousescroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "MOUSESCROLL";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <0>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 

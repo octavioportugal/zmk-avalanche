@@ -11,7 +11,7 @@
             compatible = "zmk,behavior-key-repeat";
             label = "BLUETHOOTH";
             #binding-cells = <0>;
-            usage-pages = #include <dt-bindings/zmk/bt.h>;
+            usage-pages = <BT_USES_HID>;
         };
 
         mousescroll: mousescroll {

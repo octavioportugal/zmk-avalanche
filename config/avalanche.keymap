@@ -54,11 +54,11 @@
             // ---------------------------------------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&none   &kp F1  &kp F2  &kp F3          &kp F4          &kp F5                          &kp F6        &kp F7     &kp F8        &kp F9        &kp F10       &kp PRINTSCREEN
-&trans  &trans  &trans  &kp UP_ARROW    &trans          &none                           &kp ASTERISK  &kp N7     &kp N8        &kp N9        &kp PLUS      &none
-&trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none                        &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS        &none    &none
-&trans  &none   &none   &none           &none           &trans           &trans  &none  &none         &trans     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp DOT  &none
-        &trans  &trans  &trans          &trans          &trans                          &trans        &trans     &trans        &trans        &kp NUMBER_0
+&none   &kp F1  &kp F2  &kp F3          &kp F4          &kp F5                          &kp F6             &kp F7     &kp F8        &kp F9        &kp F10       &kp PRINTSCREEN
+&trans  &trans  &trans  &kp UP_ARROW    &trans          &none                           &kp ASTERISK       &kp N7     &kp N8        &kp N9        &kp PLUS      &none
+&trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none                             &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS        &none    &none
+&trans  &none   &none   &none           &none           &trans           &trans  &none  &kp RIGHT_COMMAND  &trans     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp DOT  &none
+        &trans  &trans  &trans          &trans          &trans                          &trans             &trans     &trans        &trans        &kp NUMBER_0
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;

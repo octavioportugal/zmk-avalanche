@@ -66,11 +66,11 @@
 
         SYMBOLS {
             bindings = <
-&trans  &trans     &trans             &trans      &trans         &trans                              &trans         &trans     &trans            &trans                &trans                 &trans
-&trans  &kp APOS   &kp DOUBLE_QUOTES  &kp ASTRK   &kp LESS_THAN  &kp GREATER_THAN                    &kp AMPERSAND  &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp PERCENT            &trans
-&kp U   &trans     &kp EXCLAMATION    &kp MINUS   &kp PLUS       &kp EQUAL         &kp HASH                         &kp PIPE   &kp COLON         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION     &trans       &trans
-&trans  &kp CARET  &kp COMMA          &kp PERIOD  &kp BACKSLASH  &kp GRAVE         &trans    &trans  &trans         &trans     &kp SLASH         &kp DOLLAR            &kp LEFT_BRACE         &kp RIGHT_BRACE  &kp AT_SIGN  &trans
-        &trans     &trans             &trans      &trans         &trans                              &trans         &trans     &trans            &trans                &trans
+&trans  &trans     &trans           &trans      &trans         &trans                              &trans         &trans      &trans            &trans                &trans                 &trans
+&trans  &kp APOS   &kp PIPE         &kp ASTRK   &kp LESS_THAN  &kp GREATER_THAN                    &kp AMPERSAND  &kp TILDE   &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp PERCENT            &trans
+&kp U   &trans     &kp EXCLAMATION  &kp MINUS   &kp PLUS       &kp EQUAL         &kp HASH                         &kp DOLLAR  &kp COLON         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION     &trans             &trans
+&trans  &kp CARET  &kp COMMA        &kp PERIOD  &kp BACKSLASH  &kp GRAVE         &trans    &trans  &kp BACKSLASH  &kp PIPE    &kp SLASH         &kp AT_SIGN           &kp LEFT_BRACE         &kp RIGHT_BRACE  &kp DOUBLE_QUOTES  &trans
+        &trans     &trans           &trans      &trans         &trans                              &trans         &trans      &trans            &trans                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;

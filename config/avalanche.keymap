@@ -22,12 +22,12 @@
 &kp TAB           &kp Q         &kp W   &kp E      &kp R      &kp T                                      &kp Y          &kp U              &kp I      &kp O   &kp P              &kp MINUS
 &kp ESCAPE        &kp ESC       &kp A   &kp S      &kp D      &kp F      &kp G                                          &kp H              &kp J      &kp K   &kp L              &kp SEMICOLON  &kp EQUAL  &kp CAPSLOCK
 &kp LEFT_CONTROL  &kp Z         &kp X   &kp C      &kp V      &kp B      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp RIGHT_GUI  &kp RIGHT_CONTROL  &kp N      &kp M   &kp COMMA          &kp PERIOD     &kp FSLH   &kp SQT
-                  &kp LEFT_GUI  &tog 3  &kp LSHFT  &kp SPACE  &kp ENTER                                  &kp BACKSPACE  &kp SPACE          &kp RSHFT  &tog 2  &kp RIGHT_CONTROL
+                  &kp LEFT_GUI  &mo 3   &kp LSHFT  &kp SPACE  &kp ENTER                                  &kp BACKSPACE  &kp SPACE          &kp RSHFT  &mo 2   &kp RIGHT_CONTROL
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
 
             label = "a";
         };
@@ -58,7 +58,7 @@
 &trans  &trans  &trans  &kp UP_ARROW    &trans          &none                           &kp ASTERISK       &kp N7     &kp N8        &kp N9        &kp PLUS      &none
 &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none                             &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS        &none    &none
 &trans  &none   &none   &none           &none           &trans           &trans  &none  &kp RIGHT_COMMAND  &trans     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp DOT  &none
-        &trans  &trans  &trans          &trans          &trans                          &trans             &trans     &trans        &trans        &kp NUMBER_0
+        &trans  &trans  &kp LEFT_SHIFT  &trans          &trans                          &trans             &trans     &trans        &trans        &kp NUMBER_0
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;

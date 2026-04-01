@@ -19,6 +19,4 @@
 ---
 include:
   - board: nice_nano@2
-    shield: avalanche_left
-  - board: nice_nano@2
-    shield: avalanche_right
+    shield: corne_left

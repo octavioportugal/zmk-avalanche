@@ -19,8 +19,6 @@
 ---
 include:
   - board: nice_nano@2
-    shield: nice_nano_v2
-    snippet: avalanche_left
+    shield: avalanche_left
   - board: nice_nano@2
-    shield: nice_nano_v2
-    snippet: avalanche_right
+    shield: avalanche_right

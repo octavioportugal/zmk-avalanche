@@ -3,7 +3,6 @@ name: Build ZMK Firmware
 on:
   push:
     branches: [ main, clean-upstream ]
-  pull_request:
 
 jobs:
   build:

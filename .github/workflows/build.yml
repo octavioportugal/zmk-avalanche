@@ -1,4 +1,4 @@
-name: ZMK build
+name: Build ZMK Firmware
 
 on:
   push:
@@ -7,4 +7,53 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.4
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout config
+        uses: actions/checkout@v4
+
+      - name: Checkout ZMK
+        uses: actions/checkout@v4
+        with:
+          repository: zmkfirmware/zmk
+          ref: v0.3.0
+          path: zmk
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y \
+            cmake ninja-build gperf \
+            ccache dfu-util device-tree-compiler \
+            wget python3-pip python3-setuptools python3-wheel xz-utils file make gcc gcc-multilib g++-multilib libsdl2-dev
+
+      - name: Setup Python
+        run: |
+          pip3 install west
+
+      - name: Init west
+        run: |
+          west init -l zmk/app
+          west update
+
+      - name: Build firmware (left)
+        run: |
+          west build -d build/left -b nice_nano_v2 -- -DSHIELD=avalanche_left
+
+      - name: Build firmware (right)
+        run: |
+          west build -d build/right -b nice_nano_v2 -- -DSHIELD=avalanche_right
+
+      - name: Build reset
+        run: |
+          west build -d build/reset -b nice_nano_v2 -- -DSHIELD=settings_reset
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: |
+            build/left/zephyr/zmk.uf2
+            build/right/zephyr/zmk.uf2
+            build/reset/zephyr/zmk.uf2
